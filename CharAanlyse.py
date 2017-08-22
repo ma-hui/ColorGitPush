@@ -51,6 +51,7 @@ def image_to_dot(pic , width=SINGLE_WIDTH, height=SINGLE_HEIGHT):
 
 def trim_dot(str):
      ret = re.sub(Empty_Re, "\n", str)
+     ret = re.sub('\n+','\n',ret)    # 删除并列的多换行
      return  ret
 
 def show_dot_pic(strs):
@@ -62,5 +63,5 @@ def show_dot_pic(strs):
 
 
 if __name__ == '__main__':
-    show_dot_pic('I LOVE YOU')
+    show_dot_pic('E')
 
